@@ -57,3 +57,8 @@ git push -u origin main
 ## Privacy note
 
 GitHub Pages websites are public. Do not publish proprietary drawings, customer-controlled information, internal performance data, personal addresses, or restricted photographs.
+
+
+## Image update
+
+This version includes an optimized hero background, three engineering project galleries, and a personal gallery. Web-ready `.webp` files are in `assets/images/`; original uploads are retained in `assets/images/originals/`. Confirm employer/customer authorization before publishing worksite or vehicle-interior photography.
