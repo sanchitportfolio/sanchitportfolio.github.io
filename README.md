@@ -1,1 +1,0 @@
-Commercial GitHub Pages portfolio. Place your rail image in repository root as 1.0.jpeg and deploy via GitHub Pages.
