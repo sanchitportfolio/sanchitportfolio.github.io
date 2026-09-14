@@ -1,4 +1,2 @@
 # SanchitPortfolio
-Premium GitHub Pages engineering portfolio.
-
-Replace placeholder files in images/ and resume/ then push to GitHub Pages.
+Add your train image as 1.0.jpeg in repository root and enable GitHub Pages.
