@@ -1,0 +1,1 @@
+document.querySelectorAll(".counter").forEach(c=>{let t=+c.dataset.target,i=0;let x=setInterval(()=>{i++;c.textContent=i;if(i>=t)clearInterval(x)},80)});window.addEventListener('scroll',()=>{document.querySelector('.hero').style.backgroundPositionY=(window.scrollY*0.3)+'px';});
