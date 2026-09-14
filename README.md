@@ -1,0 +1,1 @@
+Deploy to GitHub Pages by uploading repository contents to SanchitPortfolio.
