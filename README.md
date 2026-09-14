@@ -1,2 +1,1 @@
-# SanchitPortfolio
-Add your train image as 1.0.jpeg in repository root and enable GitHub Pages.
+Commercial GitHub Pages portfolio. Place your rail image in repository root as 1.0.jpeg and deploy via GitHub Pages.
