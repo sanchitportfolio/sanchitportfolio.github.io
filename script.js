@@ -1,1 +1,1 @@
-console.log("Portfolio loaded")
+document.querySelectorAll("a").forEach(e=>e.setAttribute("target","_blank"));
