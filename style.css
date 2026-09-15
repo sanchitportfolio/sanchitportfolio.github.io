@@ -55,7 +55,7 @@ nav {
 
 .nav div {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 nav a {
@@ -64,18 +64,18 @@ nav a {
   transition: all 0.3s ease;
   font-size: 0.95rem;
   position: relative;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
+  white-space: nowrap;
 }
 
 nav a::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 0;
   width: 0;
   height: 2px;
   background: linear-gradient(90deg, #00d4ff, #00ff88);
-  transform: translateX(-50%);
   transition: width 0.3s ease;
 }
 
@@ -228,7 +228,7 @@ header.hero {
 }
 
 section {
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
@@ -259,7 +259,7 @@ section::before {
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: #00d4ff;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -337,7 +337,7 @@ p {
 }
 
 .about-content p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: #ddd;
   line-height: 1.8;
 }
