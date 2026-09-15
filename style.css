@@ -53,9 +53,9 @@ nav {
   letter-spacing: 1px;
 }
 
-.nav div {
+nav > div:last-child {
   display: flex;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 nav a {
@@ -546,8 +546,8 @@ p {
     padding: 2rem 1rem;
   }
 
-  nav div {
-    gap: 1rem;
+  nav > div:last-child {
+    gap: 1.5rem;
   }
 
   .grid {
