@@ -151,6 +151,7 @@
       <div class="viewer-wrap">
         <iframe
           class="pdf-frame"
+          id="pdf-frame"
           title="Sanchit S. Bhadoria Resume"
           src="assets/resume/SANCHIT%20S%20BHADORIA.pdf"
           type="application/pdf"
@@ -174,9 +175,17 @@
             var href = link.getAttribute('href') || '';
             var parts = href.split('/');
             var filename = parts[parts.length - 1] || '';
-            // decodeURIComponent handles %20 etc.
             try { filename = decodeURIComponent(filename); } catch (e) { /* ignore */ }
             display.textContent = filename;
+          }
+
+          // If the iframe fails to load (e.g. 404), replace it with the fallback link visible
+          var frame = document.getElementById('pdf-frame');
+          if (frame) {
+            frame.addEventListener('error', function () {
+              var fallback = document.querySelector('.fallback');
+              if (fallback) fallback.style.display = 'block';
+            });
           }
         } catch (e) {
           // fail silently
