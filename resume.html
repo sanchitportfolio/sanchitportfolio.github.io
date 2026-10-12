@@ -107,6 +107,18 @@
         color: var(--accent);
       }
 
+      .file-name {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-left: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 260px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
       @media (max-width: 680px) {
         .toolbar {
           flex-direction: column;
@@ -129,7 +141,9 @@
       <div class="toolbar">
         <h1>Resume</h1>
         <div class="actions">
-          <a class="btn" href="assets/resume/SANCHIT_S_BHADORIA.pdf" download>Download PDF</a>
+          <!-- Use the actual file name (spaces encoded as %20 in URLs) -->
+          <a id="download-link" class="btn" href="assets/resume/SANCHIT%20S%20BHADORIA.pdf" download>Download PDF</a>
+          <span id="resume-filename" class="file-name" aria-live="polite"></span>
           <a class="btn secondary" href="index.html">Back to portfolio</a>
         </div>
       </div>
@@ -138,15 +152,36 @@
         <iframe
           class="pdf-frame"
           title="Sanchit S. Bhadoria Resume"
-          src="assets/resume/SANCHIT_S_BHADORIA.pdf"
+          src="assets/resume/SANCHIT%20S%20BHADORIA.pdf"
           type="application/pdf"
         ></iframe>
       </div>
 
       <div class="fallback" aria-live="polite">
         <p>If your browser does not display the PDF inline, open it directly:</p>
-        <a href="assets/resume/SANCHIT_S_BHADORIA.pdf" target="_blank" rel="noreferrer">Open resume in a new tab</a>
+        <a id="open-link" href="assets/resume/SANCHIT%20S%20BHADORIA.pdf" target="_blank" rel="noreferrer">Open resume in a new tab</a>
       </div>
     </main>
+
+    <script>
+      // Display the current file name by reading the download link href
+      (function () {
+        try {
+          var link = document.getElementById('download-link');
+          var display = document.getElementById('resume-filename');
+          if (link && display) {
+            // Extract last path segment and decode URL-encoded spaces
+            var href = link.getAttribute('href') || '';
+            var parts = href.split('/');
+            var filename = parts[parts.length - 1] || '';
+            // decodeURIComponent handles %20 etc.
+            try { filename = decodeURIComponent(filename); } catch (e) { /* ignore */ }
+            display.textContent = filename;
+          }
+        } catch (e) {
+          // fail silently
+        }
+      })();
+    </script>
   </body>
 </html>
