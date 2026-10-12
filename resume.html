@@ -1,1 +1,152 @@
-<html><body><h1>Sanchit S. Bhadoria</h1><h2>Component Engineer</h2><p>Professional summary, experience, education and skills based on uploaded resume.</p></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume | Sanchit S. Bhadoria</title>
+    <style>
+      :root {
+        --bg: #09111d;
+        --panel: #101b2f;
+        --panel-2: #121f36;
+        --text: #edf4ff;
+        --muted: #a8bad8;
+        --accent: #7dd3fc;
+        --accent-strong: #38bdf8;
+        --border: rgba(255,255,255,0.08);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Inter, Arial, sans-serif;
+        background: linear-gradient(180deg, var(--bg) 0%, #0b1425 100%);
+        color: var(--text);
+      }
+
+      .page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 32px 20px 48px;
+      }
+
+      .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 18px;
+        padding: 16px 20px;
+        background: rgba(16, 27, 47, 0.8);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+      }
+
+      .toolbar h1 {
+        margin: 0;
+        font-size: clamp(1.2rem, 2vw, 1.8rem);
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem 1.2rem;
+        border-radius: 999px;
+        border: 1px solid rgba(125, 211, 252, 0.3);
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+        color: #08131f;
+        text-decoration: none;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 28px rgba(56, 189, 248, 0.28);
+      }
+
+      .btn.secondary {
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--border);
+      }
+
+      .viewer-wrap {
+        background: rgba(18, 31, 54, 0.7);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+      }
+
+      .pdf-frame {
+        width: 100%;
+        min-height: 80vh;
+        border: 0;
+        display: block;
+        background: white;
+      }
+
+      .fallback {
+        padding: 32px 20px 40px;
+        text-align: center;
+        color: var(--muted);
+      }
+
+      .fallback a {
+        color: var(--accent);
+      }
+
+      @media (max-width: 680px) {
+        .toolbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .actions {
+          width: 100%;
+        }
+
+        .btn {
+          flex: 1 1 auto;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <div class="toolbar">
+        <h1>Resume</h1>
+        <div class="actions">
+          <a class="btn" href="assets/resume/SANCHIT_S_BHADORIA.pdf" download>Download PDF</a>
+          <a class="btn secondary" href="index.html">Back to portfolio</a>
+        </div>
+      </div>
+
+      <div class="viewer-wrap">
+        <iframe
+          class="pdf-frame"
+          title="Sanchit S. Bhadoria Resume"
+          src="assets/resume/SANCHIT_S_BHADORIA.pdf"
+          type="application/pdf"
+        ></iframe>
+      </div>
+
+      <div class="fallback" aria-live="polite">
+        <p>If your browser does not display the PDF inline, open it directly:</p>
+        <a href="assets/resume/SANCHIT_S_BHADORIA.pdf" target="_blank" rel="noreferrer">Open resume in a new tab</a>
+      </div>
+    </main>
+  </body>
+</html>
